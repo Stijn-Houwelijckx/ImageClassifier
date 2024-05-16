@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>image classification</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-container">
+        <h1>loading model</h1>
+
+        <video
+          id="webcam"
+          autoplay
+          playsinline
+          width="350"
+          height="350"
+        ></video>
+        <canvas id="canvas" class="d-none"></canvas>
+        <audio id="snapSound" src="" preload="auto"></audio>
+
+        <div class="output">
+          <div class="output__image"></div>
+          <div class="output__data"></div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button id="take-picture-btn" class="btn">Take picture</button>
+        <button id="classify-btn" class="btn">Classify image</button>
+        <button id="take-new-picture-btn" class="btn">Take new picture</button>
+        <button id="cameraFlip" class="btn">Flip camera</button>
+      </div>
+    </div>
+
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
